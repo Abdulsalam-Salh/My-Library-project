@@ -199,6 +199,11 @@ footer{
     text-align: justify;
 }
 
+/* Adjust the hight of the text line. */
+.footerAboutUs p{
+    line-height: 1.6;
+}
+
 /* For the 'quick links' section of the footer. */
 .footerLinks{
     display: flex;
@@ -339,4 +344,39 @@ hr{
     font-size: 18px;
     border: solid gray 1px;
     border-radius: 5px;
+}
+
+
+/* ------------------------- Media querys -------------------------------- */
+
+
+/* For mobile */
+@media (max-width: 480px){
+    header > .logo, nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .books{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerContent{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* For tablet */
+@media (min-width: 481px) and (max-width: 768px){
+    .books{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerContent{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
