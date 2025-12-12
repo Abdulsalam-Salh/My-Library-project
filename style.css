@@ -5,15 +5,24 @@
     box-sizing: border-box;
 }
 
+hr{
+    margin: 80px auto;
+    width: 60%;
+    border-width: 3px;
+}
+
 /* Header styling. adjusting both the <nav> and <div.logo> */
 header{
-    background-color: rgb(0, 0, 254);
-    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1em 2em rgb(236, 172, 61);
+    z-index: 2;
 }
 
 /* This section styles the logo and the label. */
@@ -21,7 +30,7 @@ header{
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 24px;
+    font-size: 1.4em;
     margin-left: 30px;
 }
 
@@ -30,7 +39,6 @@ nav ul{
     list-style: none;
     display: flex;
     gap: 45px;
-    color: rgb(255, 255, 255);
     margin-right: 30px;
 }
 
@@ -40,139 +48,307 @@ nav ul li{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-}
-
-/* For the hover effect on navigation list items */
-nav ul li:hover{
-    cursor: pointer;
-    background-color: rgb(0, 179, 255);
-    border-radius: 10px;
-    transition: background-color 0.5s ease;
-    text-decoration-line: underline;
+    gap: 20px;
 }
 
 /* For the navigation links */
 ul li a{
-    color: rgb(255, 255, 255);
     font-size: 20px;
-    text-decoration: none;
+    text-decoration-line: none;
+    color: rgb(210, 137, 1);
+    transition: color 0.5s ease;
+}
+
+/* For the hover effect on navigation list items */
+nav ul li a:hover{
+    cursor: pointer;
+    color: rgb(0, 183, 255);
 }
 
 
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------- HERO SECTION --------------------------------------------------------- */
 
 
 /* For the section */
-section{
-    text-align: center;
-    background-image: url("images/sectionBackgroundImage.jpg");
+.startSection{
+    position: relative;
+    height: 600px;
+    background-image: url("images/sectionBackgroundImage.png");
     background-size: cover;
     background-position: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 100px 20px;
+    padding: 40px 30px;
     line-height: 2.0;
     font-size: 22px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
+/* main tital animatin */
+.mainTital{
+    font-size: 50px;
+    margin-left: 250px;
+    line-height: 4.0;
+    animation-name: textShadow;
+    animation-duration: 3s;
+	animation-timing-function: ease;
+    animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+
+/* for the start section. */
+.startSection > h2{
+    width: fit-content;
+    display: block;
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 5s steps(45), cursorBlink 0.8s step-end infinite;
+}
+
+/* to reach the <a> that contain the button and remove the underline from it. */
+.startSection a{
+    text-decoration: none;
+}
+
+
 /* For the 'Show books' button */
-.showBooksButton{
-    background-color: green;
+.browesBooksButton{
+    display: block;
+    background-color: rgb(218, 144, 35);
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
     margin-top: 20px;
+    margin-left: 20%;
+    color: white;
+    text-decoration-line: none;
+    transition: background-color 0.5s ease, box-shadow 0.6s ease;
 }
 
 /* For the 'Show books' button hover effect */
-.showBooksButton:hover{
-    background-color: darkgreen;
-    transition: background-color 0.5s ease;
-}
-
-/* For the 'Show books' button text inside the button */
-.showBooksButton a{
-    color: white;
-    text-decoration: none;
+.browesBooksButton:hover{
+    background-color: rgb(143, 86, 0);
+    box-shadow: 0 0.3rem 1rem rgba(249, 248, 248, 0.3);
 }
 
 
-/* ------------------------------------------------------------- */
+/* ------------------------------------------- MAIN SECTION -------------------------------------------------------- */
 
+
+/* Down bottun */
 
 /* For the 'Special books' text in the main content. */
-main h1{
+#specialBooks{
+    color: white;
     text-align: center;
     margin: 30px;
+    line-height: 3.0;
+    background-color: rgb(242, 201, 112);
+    border-radius: 10px 50px;
+    box-shadow: 0 0.3rem 0.3rem rgba(94, 60, 10, 0.7);
+}
+
+/* Adding an animtaion for the 'sepcial books' text. */
+#specialBooks{
+    animation-name: text-shadow-multicolor;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
 }
 
 /* To show ana adjust the books beside each other. */
-.books{
+.specialBooks{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 30px;
-    margin: 30px;
+    margin: 40px 0px;
 }
 
 /* To make borders around book covers. */
-.books img{
-    border: solid black 2px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+.specialBooks img{
+    border: solid black 1px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
 }
 
 /* Adjust the contect inside the book boxes */
-.book1, .book2, .book3, .book4{
+.specialBooks .book1, .specialBooks .book2, .specialBooks .book3, .specialBooks .book4{
+    text-align: left;
+    width: 15%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    transition: transform 0.5s ease, box-shadow 0.6s ease;
+}
+
+/* making some space beteen the description of the book and the cover */
+.bookDescription{
+    text-align: left;
+    margin: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.bookDescription > h2{
+    color: rgb(182, 145, 0);
 }
 
 /* Make a hover animation whenever I point my courser on it. */
-.book1:hover, .book2:hover, .book3:hover, .book4:hover{
+.specialBooks .book1:hover,.specialBooks .book2:hover, .specialBooks .book3:hover, .specialBooks .book4:hover{
     transform: scale(1.05);
-    transition: transform 0.5s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Explorer books */
+.bookExplorer{
+    text-align: center;
+    margin: 100px 0;
+    line-height: 1.6;
+}
+
+/* for the labels in other catagories */
+.bookExplorer h1{
+    color: white;
+    text-align: center;
+    margin: 30px;
+    line-height: 3.0;
+    background-color: rgb(242, 201, 112);
+    border-radius: 10px 50px;
+    box-shadow: 0 0.3rem 0.3rem rgba(94, 60, 10, 0.7);
+}
+
+/* This is the beginiging of the explorrer books section. */
+.secBook{
+    border: solid black;
+    border-width: 3px 0;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    overflow-x: auto;
+}
+
+/* Diplaying the books in the section explorrer. */
+.secBook .book1, .secBook .book2, .secBook .book3, .secBook .book4, .secBook .book5, .secBook .book6, .secBook .book7, .secBook .book8{
+    border-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    width: 15%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.15;
+    transition: transform 0.5s ease, box-shadow 0.6s ease;
+}
+
+/* For the images in the section book. */
+.secBook img{
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Hover effect for the section books. */
+.secBook .book1:hover, .secBook .book2:hover, .secBook .book3:hover, .secBook .book4:hover, .secBook .book5:hover, .secBook .book6:hover, .secBook .book7:hover, .secBook .book8:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Giving the 'details' button some good look. */
 .detailsButtons{
-    background-color: darkblue;
+    color: white;
+    width: 100%;
+    background-color: rgb(220, 173, 43);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* For the line inside the 'details' button. */
-.detailsButtons a{
-    color: white;
+.specialBooks a{
     text-decoration: none;
 }
 
 /* To make some hover animation on the 'details' button. */
 .detailsButtons:hover{
-    background-color: blue;
-    transition: background-color 0.5s ease;
+    background-color: rgb(128, 87, 0);
+    box-shadow: 0 0.5px 5px black;
+}
+
+/* Features styling */
+
+.featureDescription{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    animation: scalling 3s ease infinite;
+}
+.features{
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 50px 0;
+}
+
+.features div{
+    width: 20%;
+    height: 280px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px black;
+    padding: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.featureIcon{
+    display: block;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    transition: font-size 0.5s ease, box-shadow 0.5s ease;
+}
+
+.features h3{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.features p{
+    font-size: 1.2rem;
+}
+
+.features div:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 2px 6px rgb(182, 145, 0);
+}
+
+.features div:hover .featureIcon{
+    font-size: 3rem;
+    text-shadow: 0 2px 6px rgb(182, 145, 0);
 }
 
 
-/* -------------------------------------------------------------- */
+/* -------------------------------------------------- FOOTER ------------------------------------------------------- */
 
 
 /* Footer section */
 footer{
-    background-color: rgb(0, 0, 254);
+    background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 20px;
@@ -181,13 +357,13 @@ footer{
 
 /* Adjusting the main text (the big ones) in the footer. */
 .footerHeaders{
-    font-size: 24px;
+    font-size: 18px;
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin-bottom: 10px;
     padding: 10px;
-    border-bottom: solid white 4px;
+    border-bottom: solid rgb(255, 255, 255) 4px;
 }
 
 /* Adjuting the contect below the main text (the big ones) */
@@ -197,25 +373,25 @@ footer{
     text-align: center;
     margin-top: 10px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /* Adjusting all footer content. */
 .footerAboutUs, .footerQuickLinks, .footerInformationContact{
     width: 25%;
-    text-align: justify;
 }
 
 /* Adjust the hight of the text line. */
 .footerAboutUs p{
-    line-height: 1.6;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 /* For the 'quick links' section of the footer. */
 .footerLinks{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     text-align: center;
 }
 
@@ -229,21 +405,21 @@ footer{
 
 /* Giving the links the white colort and the padding as well. */
 .footerLinks a{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
 
 /* Giving the links some hover animation. */
 .footerLinks a:hover{
-    background-color: rgb(0, 179, 255);
+    background-color: rgb(114, 78, 0);
     border-radius: 5px;
     transition: background-color 0.5s ease;
 }
 
 /* For the line above the copyright text. */
-hr{
+footer > hr{
     margin-top: 20px;
-    border: solid white 1px;
+    border: solid rgb(255, 255, 255) 1px;
     width: 50%;
     margin: 0px auto;
 }
@@ -251,7 +427,7 @@ hr{
 /* For the copyright text */
 .copyRights{
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -277,7 +453,7 @@ hr{
 
 /* For the contact form's submit button */
 .contactForm button{
-    background-color: darkblue;
+    background-color: rgb(220, 173, 43);
     color: white;
     padding: 10px;
     border: none;
@@ -322,7 +498,7 @@ hr{
 
 /* For the search book form's submit button */
 .searchBook button{
-    background-color: darkblue;
+    background-color: rgb(220, 173, 43);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -482,5 +658,75 @@ hr{
     .footerInformationContact{
         text-align: left;
         gap: 15px;
+    }
+}
+
+
+/* Animation section */
+
+/* For the text in start section */
+@keyframes cursorBlink{
+    from, to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: white;
+    }
+}
+@keyframes type {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 45ch;
+    }
+}
+
+
+/* For the special books section. */
+@keyframes text-shadow-multicolor {		
+	0% {
+      text-shadow:0 0px 15px   rgb(85, 51, 0);
+    }
+    33% {
+      text-shadow:0 0px 15px   rgb(254, 208, 139);
+    }
+    66% {
+      text-shadow:0 0px 10px   rgb(195, 118, 3);
+    }
+    100% {
+      text-shadow:0 0px 10px    rgb(85, 51, 0);
+    }
+}
+
+/* Main titla animation */
+@keyframes textShadow{
+    0%{
+        text-shadow: 0 0 0 rgb(210, 137, 1);
+    }
+
+    50%{
+        color: rgb(210, 137, 1);
+        text-shadow: 0 0.1em 0.3em rgb(210, 137, 1);
+    }
+
+    100%{
+        text-shadow: 0 0 0 rgb(210, 137, 1);
+    }
+}
+
+@keyframes scalling{
+    0%{
+        color: black;
+    }
+
+    50%{
+        color: rgb(210, 137, 1);
+        text-shadow: 0 3px 6px rgb(210, 137, 1);
+    }
+
+    100%{
+        color: black;
     }
 }

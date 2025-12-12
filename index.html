@@ -9,64 +9,449 @@
 </head>
 
 <body>
+    <!-- The header area. -->
     <header>
         <div class="logo">
-            <img src="images/icons/mainIcon.png" alt="This is a logo." width="100px" height="100px">
+            <img src="images/icons/mainIcon.png" alt="This is a logo." width="80px" height="80px">
             <h2>My Library</h2>
         </div>
 
         <nav>
             <ul>
-                <li><img src="images/icons/home.png" alt="This is a main page icon" width="30px" height="30px"><a href="index.html">Main page</a></li>
-                <li><img src="images/icons/stack-of-books.png" alt="This is a books icon" width="30px" height="30px"><a href="booksPage.html">Books</a></li>
+                <li><img src="images/icons/home.png" alt="This is a main page icon" width="30px" height="30px"><a href="#specialBooks">Special books</a></li>
+                <li><img src="images/icons/stack-of-books.png" alt="This is a books icon" width="30px" height="30px"><a href="#showBooks">catagories</a></li>
                 <li><img src="images/icons/operator.png" alt="This is a contact us icon" width="30px" height="30px"><a href="contactPage.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>My Library is your place to read, buy, and share books with others.</h1>
-        <button class="showBooksButton" type="submit"><a href="booksPage.html">Show books</a></button>
+    <!-- The section under the area. -->
+    <section class="startSection">
+        <p class="mainTital"><b>My Library</b></p>
+        <h2>your place to read, buy, and share books with others.</h2>
+        <!-- <button class="showBooksButton" type="button"><a href="booksPage.html">Browes books</a></button> -->
+        <a href="booksPage.html"><button type="button" class="browesBooksButton">Browes books</button></a>
     </section>
-    
-    <!-- The main page under the section -->
-    <main>
-        <h1>✨ Special books ✨</h1>
 
-        <div class="books">
+    <!-- The main page under the section. -->
+    <main>
+        <!-- <div class="down">⬇</div>        will be added in the future.-->
+        <!-- This is special book area. -->
+        <section>
+            <h1 id="specialBooks">📚 Special books this week! 📚</h1>
+
+        <div class="specialBooks">
             <div class="book1">
-                <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
-                <h2>book1</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>1.00$</p>
-                <button class="detailsButtons" type="submit"><a href="">More details</a></button>
+                <img src="images/bookCovers/book1.png" alt="this is book1" width="100%" height="400px">
+                <div class="bookDescription">
+                    <h2>book1</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>1.00$</p>
+                    <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                </div>
             </div>
 
             <div class="book2">
-                <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
-                <h2>book2</h2>
-                <p>كلام الله عز وجل.</p>
-                <p>0.00$</p>
-                <button class="detailsButtons" type="submit"><a href="">More details</a></button>
+                <img src="images/bookCovers/book2.png" alt="This is book2" width="300px" height="400px">
+                <div class="div bookDescription">
+                    <h2>book2</h2>
+                    <p>كلام الله عز وجل.</p>
+                    <p>0.00$</p>
+                    <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                </div>
+                
             </div>
 
             <div class="book3">
-                <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                <img src="images/bookCovers/book3.png" alt="This is book3" width="300px" height="400px">
+                <div class="bookDescription">
                 <h2>book3</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
-                <p>30.00$</p>
-                <button class="detailsButtons" type="submit"><a href="">More details</a></button>
+                <p>1.00$</p>
+                <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                </div>
             </div>
 
             <div class="book4">
-                <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
-                <h2>book4</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>20.00$</p>
-                <button class="detailsButtons" type="submit"><a href="">More details</a></button>
+                <img src="images/bookCovers/book4.png" alt="This is book4" width="300px" height="400px">
+                <div class="bookDescription">
+                    <h2>book4</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>1.00$</p>
+                    <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                </div>
             </div>
+        </section>
+
+        <hr>
+
+        <!-- This is a sections of all types of books that this page can offer. -->
+        <section class="bookExplorer">
+            <p id="showBooks" style="font-size: 36px;"><b>Exploror all the catagories we have down below!</b></p>
+
+            <!-- This is the islamic book section. -->
+            <h1 class="islamicBooksTitle">🌙 Islamic books 🌙</h1>
+            <div class="secBook">
+                <div class="book1">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book2">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="div bookDescription">
+                        <h2>book2</h2>
+                        <p>كلام الله عز وجل.</p>
+                        <p>0.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book3">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book3</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book4">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book4</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+                
+                    <div class="book5">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book5</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book6">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book6</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book7">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book7</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book8">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book8</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Horror section. -->
+            <h1 class="horrorBooksTitle">👻 Horror books 👻</h1>
+            <div class="secBook">
+                <div class="book1">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book2">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book3">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book4">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+                
+                    <div class="book5">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book6">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book7">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book8">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Historical section. -->
+            <h1 class="historicalBooksTitle">📜 Historical books 📜</h1>
+            <div class="secBook">
+                <div class="book1">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book2">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book3">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book4">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+                
+                    <div class="book5">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book6">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book7">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                   <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book8">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Storys section. -->
+            <h1 class="storyBooksTitle">📖 Story books 📖</h1>
+            <div class="secBook">
+                <div class="book1">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book2">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book3">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book4">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+                
+                    <div class="book5">
+                    <img src="images/bookCovers/book1.png" alt="this is book1" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book6">
+                    <img src="images/bookCovers/book2.png" alt="This is book2" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book7">
+                    <img src="images/bookCovers/book3.png" alt="This is book3" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+
+                <div class="book8">
+                    <img src="images/bookCovers/book4.png" alt="This is book4" width="200px" height="300px">
+                    <div class="bookDescription">
+                        <h2>book1</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1.00$</p>
+                        <a href="" ><button class="detailsButtons" type="button">More details</button></a>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="featureDescription">Why using My Library?</h1>
+
+        <section class="features">         
+            <div>
+                <span class="featureIcon">🚀</span>
+                <h3>Fast Access</h3>
+                <p>Read your favorite books instantly with zero loading time.</p>
+            </div>
+            <div>
+                <span class="featureIcon">📱</span>
+                <h3>Multi-Device</h3>
+                <p>Seamlessly switch between your phone, tablet, and laptop.</p>
+            </div>
+            <div>
+                <span class="featureIcon">💡</span>
+                <h3>Smart Search</h3>
+                <p>Find exactly what you are looking for with our advanced filters.</p>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer area. -->
     <footer>
         <div class="footerHeaders">
             <h3>About My library</h3>
@@ -79,7 +464,7 @@
                 <p><b>My Library</b> is the place where everyone can share their books and knowledge with others. It's where you can find a variety of books to suit your interests.</p>
             </div>
             <div class="footerLinks">
-                <a href="index.html">Main page</a>
+                <a href="#specialBooks">Special books</a>
                 <a href="booksPage.html">Books</a>
                 <a href="contactPage.html">Contact us</a>
             </div>
