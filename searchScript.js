@@ -1,5 +1,3 @@
-// searchScript.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get DOM elements
     const searchInput = document.getElementById('search');

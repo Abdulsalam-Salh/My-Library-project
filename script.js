@@ -58,7 +58,7 @@ function renderUsers() {
     const li = document.createElement('li');
 
     const info = document.createElement('span');
-    info.innerHTML = `<strong>${user.name}</strong><br>${user.email} <br> <b>Subject:</b> ${user.subject} <br> <b>Message:</b> ${user.message}`;
+    info.innerHTML = `<strong> Name: ${user.name}</strong><br>${user.email} <br> <b>Subject:</b> ${user.subject} <br> <b>Message:</b> ${user.message}`;
 
     const actions = document.createElement('div');
     actions.className = 'actions';

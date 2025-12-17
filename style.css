@@ -281,46 +281,26 @@ nav ul li a:hover{
   background: transparent;
   position: relative;
   border-radius: 10px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cover:first-child {
   margin-left: 0;
 }
 
-/* ====== Book Image ====== */
+/*  Book Image  */
 .cover img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.35),
-    inset -4px 0 6px rgba(0,0,0,0.3);
-
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   transition: transform 0.4s ease;
 }
 
-/* ====== Hover Effect ====== */
+/*  Hover Effect  */
 .cover:hover {
-  transform:
-    translateY(-40px)
-    rotateY(18deg)
-    scale(1.05);
+  transform: translateY(-40px) translateX(6px) rotateY(18deg) scale(1.05);
   z-index: 10;
 }
-.cover:hover img {
-  transform: translateX(6px);
-}
-
-/* ====== Optional Group Interaction ====== */
-.covers:hover .card {
-  transform: translateX(-10px);
-}
-
-.covers .card:hover ~ .card {
-  transform: translateX(20px);
-}
-
 
 /* Explorer books */
 .bookExplorer{
@@ -359,14 +339,14 @@ nav ul li a:hover{
     border-radius: 5px;
     box-shadow: 0 2px 5px black;
     padding: 10px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .featureIcon{
     display: block;
     font-size: 2.5rem;
     margin: 2rem 0;
-    transition: font-size 0.5s ease, box-shadow 0.5s ease;
+    transition: all  0.5s ease;
 }
 
 .features h3{
@@ -520,6 +500,7 @@ footer > hr{
 .fillInfoTitle{
     text-align: center;
 }
+
 .contactForm{
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -543,7 +524,7 @@ footer > hr{
     margin-bottom: 5px;
 }
 
-/* Local storage styling. */
+/* Local storage box styling. */
 #infoList {
   list-style: none;
   padding: 0;
@@ -559,16 +540,13 @@ footer > hr{
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(5px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 #infoList li span {
   flex-grow: 1;
 }
-
-/* add-btn {
-  background-color: #4caf50;
-  color: white;
-} */
 
 .add-btn:hover {
   background-color: #43a047;
@@ -598,7 +576,7 @@ footer > hr{
 }
 
 .actions .delete {
-  background-color: #e91e63;
+  background-color: #ff8800;
   color: white;
 }
 
@@ -688,7 +666,6 @@ footer > hr{
     height: 50px;
     border: 2px solid black;
     border-radius: 50%;
-    /* background-color: white; */
     backdrop-filter: blur(5px);
     padding: 5px;
     position: relative;
@@ -1194,22 +1171,6 @@ footer > hr{
     }
 }
 
-/* Main titla animation */
-@keyframes textShadow{
-    0%{
-        text-shadow: 0 0 0 rgb(210, 137, 1);
-    }
-
-    50%{
-        color: rgb(210, 137, 1);
-        text-shadow: 0 0.1em 0.3em rgb(210, 137, 1);
-    }
-
-    100%{
-        text-shadow: 0 0 0 rgb(210, 137, 1);
-    }
-}
-
 @keyframes fadInRight{
     0%{
         opacity: 0;
@@ -1255,14 +1216,5 @@ footer > hr{
     100%{
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes sideScroll{
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-50%);
     }
 }
