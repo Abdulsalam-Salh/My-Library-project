@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contactPageBody">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="booksPage.html">Browse Books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- This is the icons. -->
+        <div class="infoIcon">
+            <img src="images/icons/info.png" alt="This is a info icon.">
+        </div>
+        <div class="supportIcon">
+            <img src="images/icons/customer-service.png" alt="This is a support icon.">
+        </div>
+
+        <!-- This is the form -->
+        <form id="contactForm" class="contactForm" action="">
+            <h1 class="fillInfoTitle">Fill the fields</h1>
+            <label for="fullName">Full name:-</label>
+            <input id="fullName" type="text" required placeholder="ex: Abdulsalam Mohamed Ahmed.">
+            <label for="gmail">G-mail:-</label>
+            <input id="gmail" type="email" required placeholder="ex: username@gmail.com.">
+            <label for="subject">Subject:-</label>
+            <input id="subject" type="text" required placeholder="ex: Inquiry about book availability.">
+            <label for="message">Message:-</label>
+            <textarea id="message" rows="5" cols="10" placeholder="Write a message..."></textarea>
+            <button id="submitBtn" type="submit">Send request</button>
+            <ul id="infoList"></ul>
+        </form>
+
+        <!-- Here where to show all the information -->
+        <ul id="infoList"></ul>
+    </main>
+
+    <!-- Script for handling form submission -->
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footerHeaders">
+            <h3>About My library</h3>
+            <h3>Quick links</h3>
+            <h3>Information contact</h3>
+        </div>
+
+        <div class="footerContent">
+            <div class="footerAboutUs">
+                <p><b>My Library</b> is the place where everyone can share their books and knowledge with others. It's where you can find a variety of books to suit your interests.</p>
+            </div>
+            
+            <div class="footerLinks">
+                <a href="index.html">Home page</a>
+                <a href="booksPage.html">Browse books</a>
+                <a href="contactPage.html">Contact us</a>
+            </div>
+
+            <div class="footerInformationContact">
+                <p><b>Gmail</b>: person@gmail.com</p>
+                <p><b>Phone number</b>: +218 91 0000000</p>
+                <p><b>Location: </b>Libya - Tripoly</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <p class="copyRights">All rights reserved &copy; 2025 | My Library</p>
+    </footer>
+</body>
+</html>
